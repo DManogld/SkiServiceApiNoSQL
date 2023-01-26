@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.Configure<SkiServiceDatabaseSettings>(
-    builder.Configuration.GetSection("BookStoreDatabase"));
+    builder.Configuration.GetSection("SkiServiceDatabse"));
 
 
 builder.Services.AddSingleton<ClientService>();
