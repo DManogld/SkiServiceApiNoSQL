@@ -8,49 +8,50 @@ namespace SkiServiceApi.Controllers;
 [Route("api/[controller]")]
 public class ClientController : ControllerBase
 {
-    private readonly ClientService _booksService;
+    //private IRegistrationService _registrationService;
+    //private readonly ILogger<RegistrationController> _logger;
 
-    public ClientController(ClientService booksService) =>
-        _booksService = booksService;
+    private readonly ClientService _clientService;
+
+    public ClientController(ClientService clientService) => _clientService = clientService;
 
     [HttpGet]
-    public async Task<List<Client>> Get() =>
-        await _booksService.GetAsync();
+    public async Task<List<Client>> Get() => await _clientService.GetAsync();
 
     [HttpGet("{id:length(24)}")]
     public async Task<ActionResult<Client>> Get(string id)
     {
-        var book = await _booksService.GetAsync(id);
+        var client = await _clientService.GetAsync(id);
 
-        if (book is null)
+        if (client is null)
         {
             return NotFound();
         }
 
-        return book;
+        return client;
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post(Client newBook)
+    public async Task<IActionResult> Post(Client newClient)
     {
-        await _booksService.CreateAsync(newBook);
+        await _clientService.CreateAsync(newClient);
 
-        return CreatedAtAction(nameof(Get), new { id = newBook._id }, newBook);
+        return CreatedAtAction(nameof(Get), new { id = newClient._id }, newClient);
     }
 
     [HttpPut("{id:length(24)}")]
-    public async Task<IActionResult> Update(string id, Client updatedBook)
+    public async Task<IActionResult> Update(string id, Client updatedClient)
     {
-        var book = await _booksService.GetAsync(id);
+        var client = await _clientService.GetAsync(id);
 
-        if (book is null)
+        if (client is null)
         {
             return NotFound();
         }
 
-        updatedBook._id = book._id;
+        updatedClient._id = client._id;
 
-        await _booksService.UpdateAsync(id, updatedBook);
+        await _clientService.UpdateAsync(id, updatedClient);
 
         return NoContent();
     }
@@ -58,14 +59,14 @@ public class ClientController : ControllerBase
     [HttpDelete("{id:length(24)}")]
     public async Task<IActionResult> Delete(string id)
     {
-        var book = await _booksService.GetAsync(id);
+        var client = await _clientService.GetAsync(id);
 
-        if (book is null)
+        if (client is null)
         {
             return NotFound();
         }
 
-        await _booksService.RemoveAsync(id);
+        await _clientService.RemoveAsync(id);
 
         return NoContent();
     }

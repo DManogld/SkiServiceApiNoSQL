@@ -15,19 +15,35 @@ public class Client
     [JsonPropertyName("Name")]
     public string Name { get; set; } = null!;
 
+    [BsonElement("Email")]
+    [JsonPropertyName("Email")]
     public string EMail { get; set; } = null!;
 
+    [BsonElement("Phone")]
+    [JsonPropertyName("Phone")]
     public string Phone { get; set; }
 
+    [BsonElement("CreateDate")]
+    [JsonPropertyName("CreateDate")]
     public DateTime CreateDate { get; set; }
 
+    [BsonElement("PickupDate")]
+    [JsonPropertyName("PickupDate")]
     public DateTime PickupDate { get; set; }
 
+    [BsonElement("Kommentar")]
+    [JsonPropertyName("Kommentar")]
     public string Kommentar { get; set; }
 
+    [BsonElement("Status")]
+    [JsonPropertyName("Status")]
     public string Status { get; set; } = null!;
 
+    [BsonElement("Priority")]
+    [JsonPropertyName("Priority")]
     public string Priority { get; set; } = null!;
 
+    [BsonElement("Facility")]
+    [JsonPropertyName("Facility")]
     public string Facility { get; set; } = null!;
 }
