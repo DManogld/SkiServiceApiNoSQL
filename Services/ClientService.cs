@@ -1,10 +1,9 @@
-﻿// <snippet_File>
+﻿
 using SkiServiceApi.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
 namespace SkiServiceApi.Services;
-
 public class ClientService
 {
     private readonly IMongoCollection<Client> _skiServiceCollection;
@@ -12,10 +11,8 @@ public class ClientService
     public ClientService(IOptions<SkiServiceDatabaseSettings> SkiServiceDatabaseSettings)
     {
         var mongoClient = new MongoClient(SkiServiceDatabaseSettings.Value.ConnectionString);
-
         var mongoDatabase = mongoClient.GetDatabase(SkiServiceDatabaseSettings.Value.DatabaseName);
-
-        _skiServiceCollection = mongoDatabase.GetCollection<Client>(SkiServiceDatabaseSettings.Value.SkiServiceCollectionName);
+        _skiServiceCollection = mongoDatabase.GetCollection<Client>(SkiServiceDatabaseSettings.Value.SkiServiceCollectionNameClient);
     }
 
 

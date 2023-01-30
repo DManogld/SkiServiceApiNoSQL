@@ -15,7 +15,7 @@ public class Client
     [JsonPropertyName("Name")]
     public string Name { get; set; } = null!;
 
-    [BsonElement("Email")]
+    [BsonElement("EMail")]
     [JsonPropertyName("Email")]
     public string EMail { get; set; } = null!;
 

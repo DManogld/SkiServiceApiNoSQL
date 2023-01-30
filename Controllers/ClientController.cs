@@ -1,22 +1,21 @@
 ﻿using SkiServiceApi.Models;
 using SkiServiceApi.Services;
 using Microsoft.AspNetCore.Mvc;
+using ApiKeyCustomAttributes.Attributes;
 
 namespace SkiServiceApi.Controllers;
 
+[ApiKey]
 [ApiController]
 [Route("api/[controller]")]
 public class ClientController : ControllerBase
 {
-    //private IRegistrationService _registrationService;
-    //private readonly ILogger<RegistrationController> _logger;
 
     private readonly ClientService _clientService;
-
     public ClientController(ClientService clientService) => _clientService = clientService;
 
     [HttpGet]
-    public async Task<List<Client>> Get() => await _clientService.GetAsync();
+        public async Task<List<Client>> Get() => await _clientService.GetAsync();
 
     [HttpGet("{id:length(24)}")]
     public async Task<ActionResult<Client>> Get(string id)
@@ -27,7 +26,6 @@ public class ClientController : ControllerBase
         {
             return NotFound();
         }
-
         return client;
     }
 

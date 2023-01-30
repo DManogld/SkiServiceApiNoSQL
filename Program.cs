@@ -4,19 +4,20 @@ using SkiServiceApi.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddEndpointsApiExplorer();
 
 // Add services to the container.
-builder.Services.Configure<SkiServiceDatabaseSettings>(
-    builder.Configuration.GetSection("SkiServiceDatabse"));
+builder.Services.Configure<SkiServiceDatabaseSettings>(builder.Configuration.GetSection("SkiServiceDatabse"));
 
 
 builder.Services.AddSingleton<ClientService>();
+builder.Services.AddSingleton<MittarbieterService>();
 
 
 builder.Services.AddControllers()
     .AddJsonOptions(
         options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
-// </snippet_AddControllers>
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
