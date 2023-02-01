@@ -1,0 +1,1 @@
+﻿mongorestore -h localhost:27017 --nsInclude=${SkiService}.${client} "C:\Users\Administrator\OneDrive - ipso! Bildung\Desktop\Schule\2023_Winter\Modul165_NoSQLDatenbank\Projektarbeit\DBBackup\SkiService\client.bson" 

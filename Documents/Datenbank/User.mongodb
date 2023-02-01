@@ -1,0 +1,13 @@
+use SkiService
+
+// User 1
+db.createUser({user: "RW", pwd: "RW2023", roles: [{role: "readWrite", db: "SkiService"}]})
+
+// User2
+db.createUser({user: "OR", pwd: "OR2023", roles: [{role: "read", db: "SkiService"}]})
+
+//-- Login nach der Connection 
+db.auth("OR", "OR2023")
+
+// Login mit mongosh
+mongosh --port 27017 --authenticationDatabase "SkiService" -u "OR" -p

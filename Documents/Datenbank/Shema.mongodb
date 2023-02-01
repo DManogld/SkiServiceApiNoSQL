@@ -1,0 +1,31 @@
+//Shema für client
+db.runCommand({
+    collMod: "client",
+    validator: 
+        {$jsonSchema:{ 
+            bsonType: "object",
+            required: ["Name", "Email", "Phone", "CreateDate", "PickupDate", "Kommentar", "Status","Priority","Facility"],
+            properties:{
+                "Name":{bsonType: "string", minimum: 0 },
+                "Email": {bsonType: "string", minLength: 1},
+                "Phone": {bsonType: "string", minLength: 9},
+                "CreateDate": {bsonType: "date"},
+                "PickupDate": {bsonType: "date"},
+                "Kommentar": {bsonType: "string"},
+                "Status": {bsonType: "string", enum: ["Offen", "InArbeit", "Abgschlossen"]},
+                "Priority": {bsonType: "string",enum: ["Tief","Standart","Express"]},
+                "Facility":{bsonType: "string", enum:["Kleiner Service","Grosser Service","Rennski-Service","Bindung montieren und einstellen","Fell zuschneiden","Heisswachsen"]}}}},
+            validationAction: "error"})
+
+
+//Shema für Mitarbeiter
+db.runCommand({
+    collMod:"Mittarbeiter",
+    validator:
+    {$jsonSchema:{
+        bsonType:"object",
+        required:["Name", "ApiKey"],
+        properties:{
+            "Name":{bsonType: "string", minimum: 0},
+            "ApiKey":{bsonType: "string", minimum: 5}}}},
+        validationAction:"error"})

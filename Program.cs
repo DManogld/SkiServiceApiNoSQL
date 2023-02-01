@@ -12,7 +12,7 @@ builder.Services.Configure<SkiServiceDatabaseSettings>(builder.Configuration.Get
 
 builder.Services.AddSingleton<ClientService>();
 builder.Services.AddSingleton<MittarbieterService>();
-
+builder.Services.AddSingleton<StatusService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(
