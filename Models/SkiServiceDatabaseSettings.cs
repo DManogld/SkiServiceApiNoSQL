@@ -1,5 +1,8 @@
 ﻿namespace SkiServiceApi.Models;
 
+/// <summary>
+/// Settings für die Datebank Klasse
+/// </summary>
 public class SkiServiceDatabaseSettings
 {
     public string ConnectionString { get; set; } = null!;

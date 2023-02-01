@@ -4,6 +4,9 @@ using System.Text.Json.Serialization;
 
 namespace SkiServiceApi.Models
 {
+    /// <summary>
+    /// Mitarbeiter Model Klasse
+    /// </summary>
     public class Mitarbeiter
     {
         [BsonId]

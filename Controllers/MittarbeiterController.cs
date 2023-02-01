@@ -11,9 +11,16 @@ namespace SkiServiceApi.Controllers
     [ApiController]
     public class MitarbeiterController : ControllerBase
     {
+        /// <summary>
+        /// Mittarbeiter Controller Konstruktor mit instanziierung
+        /// </summary>
         private readonly MittarbieterService _mittarbeiterService;
         public MitarbeiterController(MittarbieterService mittarbieterService) => _mittarbeiterService = mittarbieterService;
 
+        /// <summary>
+        /// Get Methode welche Service aufruft um Mittarbeiter liste augibt
+        /// </summary>
+        /// <returns>Liste von Mittarbeiter</returns>
         [HttpGet]
         public async Task<List<Mitarbeiter>> Get() => await _mittarbeiterService.GetAsync();
     }

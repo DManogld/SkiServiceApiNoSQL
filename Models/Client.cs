@@ -5,6 +5,9 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace SkiServiceApi.Models;
 
+/// <summary>
+/// Client Model Klasse
+/// </summary>
 public class Client
 {
     [BsonId]

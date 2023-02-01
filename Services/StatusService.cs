@@ -8,6 +8,10 @@ namespace SkiServiceApi.Services
     {
         private readonly IMongoCollection<Client> _skiServiceCollection;
 
+        /// <summary>
+        /// Status Service Konstruktor mit Dateneinstellungen/-konfiguration
+        /// </summary>
+        /// <param name="SkiServiceDatabaseSettings"></param>
         public StatusService(IOptions<SkiServiceDatabaseSettings> SkiServiceDatabaseSettings)
         {
             var mongoClient = new MongoClient(SkiServiceDatabaseSettings.Value.ConnectionString);
@@ -15,6 +19,10 @@ namespace SkiServiceApi.Services
             _skiServiceCollection = mongoDatabase.GetCollection<Client>(SkiServiceDatabaseSettings.Value.SkiServiceCollectionNameClient);
         }
 
+        /// <summary>
+        /// Get Methode welche Client von MongoDB Datenbank nach Status gefiltert abruft
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Client>> GetAsync() 
         {
             var sort = Builders<Client>.Sort.Descending("Status");

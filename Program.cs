@@ -1,7 +1,10 @@
-
 using SkiServiceApi.Models;
 using SkiServiceApi.Services;
 
+/// <summary>
+/// Hauptprogramm, wo API startet, instanziierung von Services, API-KEY
+/// </summary>
+/// <param name="args"></param>
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
@@ -14,11 +17,8 @@ builder.Services.AddSingleton<ClientService>();
 builder.Services.AddSingleton<MittarbieterService>();
 builder.Services.AddSingleton<StatusService>();
 
-builder.Services.AddControllers()
-    .AddJsonOptions(
-        options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
-
-
+// Hinzufügen von Services
+builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

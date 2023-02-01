@@ -12,7 +12,6 @@ namespace ApiKeyCustomAttributes.Attributes
 
     public class ApiKeyAttribute : Attribute, IAsyncActionFilter
     {
-        private readonly ILogger<ApiKeyAttribute> _logger;
         private const string APIKEYNAME = "ApiKey";
 
         /// <summary>
