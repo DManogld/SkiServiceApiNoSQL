@@ -1,3 +1,5 @@
+use SkiService
+
 db.client.insertMany([
 {
     "Name": "Hase Peter",
@@ -7,7 +9,7 @@ db.client.insertMany([
     "PickupDate": "2022-02-04",
     "Kommentar": "",
     "Status": "Offen",
-    "Priority": "Hoch",
+    "Priority": "Express",
     "Facility": "Kleiner Service"
   },
   {
@@ -18,7 +20,7 @@ db.client.insertMany([
     "PickupDate": "2022-05-04",
     "Kommentar": "",
     "Status": "InArbeit",
-    "Priority": "Hoch",
+    "Priority": "Express",
     "Facility": "Rennski-Service"
   },
   {
@@ -64,95 +66,5 @@ db.client.insertMany([
     "Status": "Offen",
     "Priority": "Express",
     "Facility": "Fell zuschneiden"
-  },
-  {
-    "Name": "Schlozer Matrin",
-    "EMail": "Schlozer.Martin@sonne.com",
-    "Phone": "757748738",
-    "CreateDate": "2023-05-11",
-    "PickupDate": "2023-06-02",
-    "Kommentar": "Heikle Kunde",
-    "Status": "Abgechlossen",
-    "Priority": "Express",
-    "Facility": "Grosser Service"
-  },
-  {
-    "Name": "Marbacher Gabiel",
-    "EMail": "Marbacher.Gabiel@sonne.com",
-    "Phone": "7699483748",
-    "CreateDate": "2023-07-06",
-    "PickupDate": "2022-07-20",
-    "Kommentar": "",
-    "Status": "Offen",
-    "Priority": "Tief",
-    "Facility": "Fell zuschneiden"
-  },
-  {
-    "Name": "Art Thomas",
-    "EMail": "Art.Thomas@sonne.com",
-    "Phone": "7699847382",
-    "CreateDate": "2023-09-21",
-    "PickupDate": "2023-09-23",
-    "Kommentar": "",
-    "Status": "InArbeit",
-    "Priority": "Express",
-    "Facility": "Kleiner Service"
-  },
-  {
-    "Name": "Himber Bannane",
-    "EMail": "Himber.Bannene@sonne.com",
-    "Phone": "769958394",
-    "CreateDate": "2023-05-05",
-    "PickupDate": "2022-06-01",
-    "Kommentar": "Fruchtig",
-    "Status": "Offen",
-    "Priority": "Express",
-    "Facility": "Rennski-Service"
-  },
-  {
-    "Name": "John Smith",
-    "EMail": "jsmith@email.com",
-    "Phone": "555-555-5555",
-    "CreateDate": "2022-01-01",
-    "PickupDate": "2022-01-02",
-    "Kommentar": "None",
-    "Status": "Offen",
-    "Priority": "Hoch",
-    "Facility": "Rennski-Service"
-  },
-  {
-    "Name": "Jane Doe",
-    "EMail": "jdoe@email.com",
-    "Phone": "555-555-5556",
-    "CreateDate": "2022-01-01",
-    "PickupDate": "2022-01-03",
-    "Kommentar": "Urgent pickup needed",
-    "Status": "Offen",
-    "Priority": "Tief",
-    "Facility": "Grosser Service"
-  },
-  {
-    "Name": "Bob Johnson",
-    "EMail": "bjohnson@email.com",
-    "Phone": "555-555-5557",
-    "CreateDate": "2022-01-02",
-    "PickupDate": "2022-01-04",
-    "Kommentar": "None",
-    "Status": "Abgeschlossen",
-    "Priority": "Express",
-    "Facility": "Kleiner Service"
-  },
-  {
-    "Name": "Samantha Williams",
-    "EMail": "swilliams@email.com",
-    "Phone": "555-555-5558",
-    "CreateDate": "2022-01-03",
-    "PickupDate": "2022-01-05",
-    "Kommentar": "Special instructions",
-    "Status": "InArbeit",
-    "Priority": "Standart",
-    "Facility": "Bindung montieren und einstellen"
   }
 ])
-
-
