@@ -28,11 +28,11 @@ public class Client
 
     [BsonElement("CreateDate")]
     [JsonPropertyName("CreateDate")]
-    public DateTime CreateDate { get; set; }
+    public string CreateDate { get; set; }
 
     [BsonElement("PickupDate")]
     [JsonPropertyName("PickupDate")]
-    public DateTime PickupDate { get; set; }
+    public string PickupDate { get; set; }
 
     [BsonElement("Kommentar")]
     [JsonPropertyName("Kommentar")]

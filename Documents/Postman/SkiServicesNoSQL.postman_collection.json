@@ -49,19 +49,72 @@
 		{
 			"name": "Client mit bestimmte ID anzeigen",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hL4bA4nB4yI0vI0fC8fH7eT6",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://localhost:59162/api/Client/63dbe09c99555bfbd7feb8ef",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "59162",
+					"path": [
+						"api",
+						"Client",
+						"63dbe09c99555bfbd7feb8ef"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Neue Client hinzufügen",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hL4bA4nB4yI0vI0fC8fH7eT6",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " {\r\n    \"clientID\": 0,\r\n    \"name\": \"David Post1\",\r\n    \"eMail\": \"test9\",\r\n    \"phone\": \"12345\",\r\n    \"createDate\": \"0001-01-01T00:00:00\",\r\n    \"pickupDate\": \"0001-01-01T00:00:00\",\r\n    \"facilityName\": \"Grosse Service\",\r\n    \"priorityName\": \"Hoch\",\r\n    \"statusName\": \"Abgeschlossen\",\r\n    \"kommentar\": \"\"\r\n  }",
+					"raw": "{\r\n    \"Name\": \"Davidddd Post\",\r\n    \"EMail\": \"David.Post@sonne.com\",\r\n    \"Phone\": \"1047440636\",\r\n    \"CreateDate\": \"2023-05-06\",\r\n    \"PickupDate\": \"2022-05-12\",\r\n    \"Kommentar\": \"Dies ist eine Post Methode\",\r\n    \"Status\": \"InArbeit\",\r\n    \"Priority\": \"Express\",\r\n    \"Facility\": \"Fell zuschneiden\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -86,14 +139,76 @@
 		{
 			"name": "Client Updaten",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hL4bA4nB4yI0vI0fC8fH7eT6",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"Name\": \"David Put\",\r\n    \"EMail\": \"test9\",\r\n    \"Phone\": \"12345\",\r\n    \"CreateDate\": \"0001-01-01\",\r\n    \"PickupDate\": \"0001-01-01\",\r\n    \"Priority\": \"Hoch\",\r\n    \"Status\": \"Abgeschlossen\",\r\n    \"Facility\": \"Kleiner Service\",\r\n    \"Kommentar\": \"\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:59162/api/Client/63dbe83699555bfbd7feb8fe",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "59162",
+					"path": [
+						"api",
+						"Client",
+						"63dbe83699555bfbd7feb8fe"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Client Löschen",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hL4bA4nB4yI0vI0fC8fH7eT6",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
@@ -115,16 +230,79 @@
 		{
 			"name": "Mittarbeiter anzeigen",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hL4bA4nB4yI0vI0fC8fH7eT6",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://localhost:59162/Mitarbeiter",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "59162",
+					"path": [
+						"Mitarbeiter"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Nach Status sortieren",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hL4bA4nB4yI0vI0fC8fH7eT6",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://localhost:59162/api/Status",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "59162",
+					"path": [
+						"api",
+						"Status"
+					]
+				}
 			},
 			"response": []
 		}
