@@ -7,7 +7,7 @@ namespace SkiServiceApi.Services
     public class StatusService
     {
         private readonly IMongoCollection<Client> _skiServiceCollection;
-
+        
         /// <summary>
         /// Status Service Konstruktor mit Dateneinstellungen/-konfiguration
         /// </summary>
